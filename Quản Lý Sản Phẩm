@@ -1,0 +1,82 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package javaapplication33;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Toan
+ */
+public class ThucHienChucNang {
+    ArrayList<SanPham> listSP = new ArrayList<>();
+    Scanner s = new Scanner(System.in);
+    
+    //yêu cầu 1: 
+    public void NhapDanhSach(){
+        System.out.println("Nhập Số Lượng Sản Phẩm:");
+        var n = s.nextInt();
+        
+        for (int i = 0; i < n; i++){
+            SanPham sp = new SanPham();
+            listSP.add(sp);
+        }
+    }
+    
+    //yêu cầu 2
+    public void XuatDanhSach(){
+        for(SanPham sp : listSP){
+            sp.XuatTT();
+            System.out.println("\n");
+        }
+    }
+    //yêu cầu 3
+    public void TimSP(){
+        System.out.println("Nhập mã sản phẩm cần tìm:");
+        String ma = s.nextLine();
+        boolean flag = false; //không tìm thấy sản phẩm
+        
+        for(SanPham sp : listSP){
+            //sp01 ->   SP01, Sp01. sP01
+            if(!sp.getMasp().equalsIgnoreCase(ma)){
+            } else {
+                sp.XuatTT();
+                flag = true;
+                break;
+            }
+        }
+      
+        if(flag == false){
+            System.out.println("Không tìm thấy sản phẩm");
+            
+        }
+    }
+    //yêu cầu 5
+    public void XoaSp(){
+        s.nextLine();
+        System.out.println("Nhập mã sản phẩm cần xóa");
+        String ma = s.nextLine();
+        
+        SanPham spFound = null;
+         
+        for(SanPham sp : listSP){
+            //sp01 -> SP01, Sp01, sP01;
+            if(sp.getMasp().equalsIgnoreCase(ma)){
+            spFound = sp;
+            break;
+      }
+    }
+        if(spFound != null){
+            //xóa sp
+            
+        }else{
+            System.out.println("Không tìm thấy sản phẩm cần cập nhật");
+            
+        }
+    }
+}
+
+  

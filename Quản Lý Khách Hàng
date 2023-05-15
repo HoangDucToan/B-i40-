@@ -1,1 +1,89 @@
-# B-i40-
+package pkg30;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author LHUser
+ */
+public class custommer {
+    int id;
+    String fullname, email, phonenumber, birthday, address, password;
+
+    public custommer() {
+    }
+
+    public custommer(int id, String fullname, String email, String phonenumber, String birthday, String address, String password) {
+        this.id = id;
+        this.fullname = fullname;
+        this.email = email;
+        this.phonenumber = phonenumber;
+        this.birthday = birthday;
+        this.address = address;
+        this.password = password;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    @Override
+    public String toString(){
+       return "Customer{" + "id=" + id + ", fullname=" + fullname + ", email=" + email + ", phonenumber=" + phonenumber + ", birthday=" + birthday + ", address=" + address + ", password=" + password + '}';
+    }
+    
+}
